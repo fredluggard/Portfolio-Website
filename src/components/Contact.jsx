@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_qkyb6mi",
+        "template_3lwcm4r",
+        form.current,
+        "0dpCurKgxpSUnFUJw"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          alert("Message sent successfully");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div>
       <div id="contact" className="contact">
@@ -60,20 +85,22 @@ function Contact() {
             <img src="/images/pictures.png" alt="" />
           </div>
           <div className="contact-form">
-            <form action="/">
-              <input type="text" placeholder="Your Name" />
-              <input type="text" placeholder="Your Email" />
-              <input type="text" placeholder="Subject" />
+            <form ref={form} onSubmit={sendEmail}>
+              <input type="text" placeholder="Your Name" name="user_name" />
+              <input type="text" placeholder="Your Email" name="user_email" />
+              <input type="text" placeholder="Subject" name="subject" />
               <textarea
-                name="msg"
                 id=""
                 cols="30"
                 rows="7"
                 placeholder="Message"
+                name="message"
               ></textarea>
-              <button className="colored-bg" type="submit">
-                Send Message
-              </button>
+              <input
+                type="submit"
+                className="colored-input"
+                value="Send Message"
+              />
             </form>
           </div>
         </div>

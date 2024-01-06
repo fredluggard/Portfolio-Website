@@ -772,6 +772,22 @@
 .contact-form textarea:focus {
   border: 1px solid black;
 }
+.contact-form .colored-input {
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: #ffbd39;
+  border-radius: 25px;
+  font-size: 17px;
+  /* margin: 20px 20px 20px 0; */
+  border: none;
+  cursor: pointer;
+}
+.contact-form .colored-input:focus {
+  border: none;
+}
 
 /*For Footer Component */
 .footer {
@@ -1461,7 +1477,7 @@
     padding: 20px;
     background-color: #f8f9fa; */
   }
-  .contact-form button {
+  .contact-form .colored-input {
     font-size: 12px;
     width: 120px;
     text-align: center;
