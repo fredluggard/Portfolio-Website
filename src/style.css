@@ -830,10 +830,11 @@
   opacity: 0.5;
 }
 .foot a {
+  text-align: left;
   text-decoration: none;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 20px;
   opacity: 0.5;
