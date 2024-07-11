@@ -929,9 +929,9 @@
     padding-bottom: 5px;
     border-bottom: 3px solid #ffbd39;
   }
-  .mobile-nav {
+  /* .mobile-nav {
     display: block;
-  }
+  } */
   /* For closing Hamburger */
   .close-mobile {
     display: block;
