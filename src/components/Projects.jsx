@@ -34,9 +34,9 @@ function Projects() {
 
         <div className="project-two">
           <div className="project-slide">
-            <img src="/images/project-4.jpg" alt="" />
+            <img src="/images/bandage.png" alt="Bandage" />
             <div className="project-link">
-              <a href="https://todo-app-pi-umber.vercel.app/">Todo App</a>
+              <a href="https://bandage-pi-puce.vercel.app/">Bandage E-store</a>
               <p>Web Design</p>
             </div>
           </div>
