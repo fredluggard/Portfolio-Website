@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
-  console.log(form);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,9 +28,49 @@ function Contact() {
       );
   };
 
+  const widthSize = window.innerWidth;
+  const ref = useRef(null);
+  const initial = "hidden";
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const transition = { duration: 1.5, delay: 0.25 };
+  const animationVariants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+  const animationHidden = {
+    hidden: {
+      opacity: 1,
+      x: 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <div>
-      <div id="contact" className="contact">
+    <motion.div
+      ref={ref}
+      whileInView="visible"
+      initial={initial}
+      variants={widthSize > 500 ? animationVariants : animationHidden}
+      animate={mainControls}
+      transition={transition}
+    >
+      <div id="contact" className="contact top-space">
         {/* The Header Section */}
         <div className="contact-one">
           <h1 className="contact-bg">Contact</h1>
@@ -106,7 +147,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,10 +1,32 @@
 import React from "react";
 import "../style.css";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { useAnimation, useInView } from "framer-motion";
 
 function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <div>
-      <div id="about" className="main-about">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false }}
+      transition={{ duration: 1 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 },
+      }}
+    >
+      <div id="about" className="main-about top-space">
         <div className="about-one">
           <img src={process.env.PUBLIC_URL + "/images/pictures.png"} alt="" />
         </div>
@@ -58,7 +80,7 @@ function About() {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

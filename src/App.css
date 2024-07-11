@@ -1,9 +1,28 @@
 .App {
-  text-align: center;
-  margin: 0 50px;
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin: 0;
 }
-/* @media screen and (max-width: 500px) {
-  .App {
-    margin: 0;
-  }
-} */
+
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+}

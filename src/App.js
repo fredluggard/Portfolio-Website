@@ -13,16 +13,20 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Hero />
-      <About />
-      <Resume />
-      {/* <Services /> */}
-      <Skills />
-      <Projects />
-      <Freelance />
-      <Contact />
-      <Footer />
+      <div className="container">
+        <NavBar />
+        <div className="holder">
+          <Hero />
+          <About />
+          <Resume />
+          {/* <Services /> */}
+          <Skills />
+          <Projects />
+          <Freelance />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../style.css";
+import { motion } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
 
 function Hero() {
   const [firstDiv1, setFirstDiv1] = useState(true);
@@ -13,8 +15,38 @@ function Hero() {
     return () => clearInterval(intervalId);
   }, []); // Empty dependency array ensures this effect runs once after mount
 
+  const ref = useRef(null);
+  const initial = "hidden";
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const transition = { duration: 1.5, delay: 0.25 };
+  const animationVariants = {
+    hidden: {
+      opacity: 0,
+      y: 75,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <div className="hero">
+    <motion.div
+      ref={ref}
+      whileInView="visible"
+      initial={initial}
+      variants={animationVariants}
+      animate={mainControls}
+      transition={transition}
+      className="hero top-space"
+    >
       {firstDiv1 ? (
         <div
           className={`hero-one transition-div ${firstDiv1 ? "" : "hidden-div"}`}
@@ -65,7 +97,7 @@ function Hero() {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 

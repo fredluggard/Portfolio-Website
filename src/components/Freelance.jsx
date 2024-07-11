@@ -2,8 +2,8 @@ import React from "react";
 
 function Freelance() {
   return (
-    <div className="freelance">
-      <img src="/images/bg_1.jpg" alt="" />
+    <div className="freelance top-space">
+      <img src="/images/bg_1.jpg" alt="A background image of a river" />
       <div className="show-freelance">
         <h1>
           I'm <span className="fred">Available</span> for Freelancing

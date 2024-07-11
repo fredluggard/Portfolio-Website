@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
 
 function Resume() {
+  const ref = useRef(null);
+  const initial = "hidden";
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const transition = { duration: 1.5 };
+  const animationVariants = {
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <div>
-      <div id="resume" className="resume">
+    <motion.div
+      ref={ref}
+      initial={initial}
+      whileInView="visible"
+      variants={animationVariants}
+      animate={mainControls}
+      transition={transition}
+    >
+      <div id="resume" className="resume top-space">
         <div className="resume-one">
           <h1 className="resume-bg">Resume</h1>
           <h1 className="resume-header">Resume</h1>
@@ -56,12 +87,12 @@ function Resume() {
           </div>
         </div>
         <div className="resume-three">
-          <a className="colored-bg" href="/">
+          <a className="colored-bg" href="/resume.pdf">
             DOWNLOAD CV
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

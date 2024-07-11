@@ -1,14 +1,18 @@
+/* For bottom spacing */
+.top-space {
+  margin-top: 200px;
+}
 /* For Nav-Bar Component */
 .navbar {
+  width: 100%;
   position: fixed;
-  top: 0;
-  left: 50px;
-  right: 50px;
+  top: -4px;
   z-index: 10;
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 5px 20px;
   background-color: black;
+  box-sizing: border-box;
 }
 .logo img {
   border-radius: 5px;
@@ -50,7 +54,7 @@
 .hero {
   width: 100%;
   position: relative;
-  top: 200px;
+  /* top: 200px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,15 +138,16 @@
 
 /* For About Me Component */
 .main-about {
+  width: 100vw;
   display: flex;
   position: relative;
-  top: 400px;
+  /* top: 400px; */
 }
 .about-one {
-  width: 50%;
+  width: 45%;
 }
 .about-two {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -160,6 +165,7 @@
   left: 14px;
 }
 .about-two p {
+  width: 90%;
   text-align: justify;
   font-size: 1.25em;
   padding: 10px 0;
@@ -179,12 +185,13 @@
 
 /* For Resume Component */
 .resume {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 500px;
+  /* top: 500px; */
 }
 .resume-bg {
   position: absolute;
@@ -248,7 +255,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 600px;
+  /* top: 600px; */
 }
 .services-bg {
   position: absolute;
@@ -309,7 +316,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 700px;
+  /* top: 700px; */
 }
 .skill-bg {
   position: absolute;
@@ -449,7 +456,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 800px;
+  /* top: 800px; */
 }
 .project-bg {
   position: absolute;
@@ -619,7 +626,7 @@
   width: 100%;
   height: 700px;
   position: relative;
-  top: 1000px;
+  /* top: 1000px; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -648,7 +655,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 1100px;
+  /* top: 1100px; */
 }
 .contact-bg {
   position: absolute;
@@ -798,7 +805,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 1300px;
+  top: 300px;
 }
 .footer p {
   opacity: 0.5;
@@ -819,6 +826,7 @@
   gap: 10px;
   justify-content: space-around;
   align-items: flex-start;
+  padding: 0 50px;
 }
 .foot h1 {
   font-size: 25px;
@@ -867,9 +875,12 @@
 
 /*----------------For Mobile Screen---------------*/
 @media screen and (max-width: 500px) {
+  .top-space {
+    margin-top: 20px;
+  }
   /*For Navbar Component */
   .navbar {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: -1px;
     left: 0;
@@ -877,12 +888,13 @@
     z-index: 10;
     display: flex;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 5px 20px;
     background-color: black;
     overflow: hidden;
   }
   .logo img {
     border-radius: 5px;
+    width: 70px;
   }
   .nav-links {
     display: none;
@@ -925,7 +937,7 @@
     display: block;
   }
   .close-mobile div {
-    width: 50px;
+    width: 40px;
     height: 3px;
     margin: 10px;
     background-color: white;
@@ -944,7 +956,7 @@
     display: none;
   }
   .mobile-nav div {
-    width: 50px;
+    width: 40px;
     height: 3px;
     margin: 10px;
     background-color: white;
@@ -984,8 +996,9 @@
   .lefty-hero {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    width: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 92%;
   }
   .left-hero p,
   .lefty-hero p {
@@ -998,6 +1011,8 @@
     font-size: 40px;
     letter-spacing: 5px;
     margin: 0;
+    width: 90%;
+    text-align: center;
   }
   .fred {
     color: #ffbd39;
@@ -1012,6 +1027,7 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .colored-bg {
     width: 100px;
@@ -1065,7 +1081,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .about-bg {
     position: absolute;
@@ -1087,6 +1103,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
   }
   /* For Resume Component */
   .resume {
@@ -1096,6 +1113,14 @@
     justify-content: center;
     position: relative;
     top: 300px;
+  }
+  .resume-one {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   .resume-bg {
     position: absolute;
@@ -1109,8 +1134,9 @@
   .resume-header {
     font-size: 70px;
   }
-  .resume-p {
+  .resume-one .resume-p {
     font-size: 1.25em;
+    text-align: center;
   }
   .resume-two {
     display: flex;

@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
 
 function Skills() {
+  const ref = useRef(null);
+  const initial = "hidden";
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const transition = { duration: 1.5, delay: 0.25 };
+  const animationVariants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <div>
-      <div id="skill" className="skills">
+    <motion.div
+      ref={ref}
+      whileInView="visible"
+      initial={initial}
+      variants={animationVariants}
+      animate={mainControls}
+      transition={transition}
+    >
+      <div id="skill" className="skills top-space">
         <div className="skill-one">
           <h1 className="skill-bg">Skills</h1>
           <h1 className="skill-header">My Skills</h1>
@@ -78,7 +109,7 @@ function Skills() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
