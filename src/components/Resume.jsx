@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useAnimation, useInView } from "framer-motion";
 
-function Resume() {
+const Resume = () => {
   const ref = useRef(null);
   const initial = "hidden";
   const isInView = useInView(ref, { once: true });
@@ -24,6 +24,15 @@ function Resume() {
       mainControls.start("visible");
     }
   }, [isInView, mainControls]);
+
+  const downloadCv = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.setAttribute("download", "resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <motion.div
@@ -87,13 +96,16 @@ function Resume() {
           </div>
         </div>
         <div className="resume-three">
-          <a className="colored-bg" href="/resume.pdf">
+          <button onClick={downloadCv} className="colored-bg">
             DOWNLOAD CV
-          </a>
+          </button>
+          {/* <a href={resume} download="resume" className="colored-bg">
+            Download
+          </a> */}
         </div>
       </div>
     </motion.div>
   );
-}
+};
 
 export default Resume;

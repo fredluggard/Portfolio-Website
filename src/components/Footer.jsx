@@ -8,9 +8,9 @@ function Footer() {
           <div className="foot">
             <h1>About</h1>
             <p>
-              I'm a Professional Frontend Web Developer with skills in
-              JavaScript and React. I have a lifelong passion and enthusiasm for
-              technology most especially programming
+              I'm a Frontend Web Developer with skills in JavaScript and React.
+              I have a lifelong passion and enthusiasm for technology most
+              especially programming
             </p>
             <div className="footer-socials">
               <a href="https://twitter.com/fredluggard">

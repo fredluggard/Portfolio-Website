@@ -34,50 +34,81 @@ function Projects() {
 
         <div className="project-two">
           <div className="project-slide">
-            <img src="/images/bandage.png" alt="Bandage" />
-            <div className="project-link">
-              <a href="https://bandage-pi-puce.vercel.app/">Bandage E-store</a>
-              <p>Web Design</p>
-            </div>
+            <a
+              className="project-card"
+              href="https://bandage-pi-puce.vercel.app/"
+            >
+              <img src="/images/bandage.png" alt="Bandage" />
+              <div className="project-link">
+                <a href="https://bandage-pi-puce.vercel.app/">
+                  Bandage E-store
+                </a>
+                <p>Web Design</p>
+              </div>
+            </a>
           </div>
           <div className="project-slide1">
-            <img src="/images/reflex.png" alt="Reflex" />
-            <div className="project-link">
-              <a href="https://reflex-zeta.vercel.app/">Reflex App</a>
-              <p>Web Design</p>
-            </div>
+            <a className="project-card" href="https://reflex-zeta.vercel.app/">
+              <img src="/images/reflex.png" alt="Reflex" />
+              <div className="project-link">
+                <a href="https://reflex-zeta.vercel.app/">Reflex App</a>
+                <p>Web Design</p>
+              </div>
+            </a>
           </div>
           <div className="project-slide2">
-            <img src="/images/healthkeep.png" alt="HealthKeep" />
-            <div className="project-link">
-              <a href="https://elastic-bath-tacky-doctor-production.pipeops.app/">
-                HealthKeep App
-              </a>
-              <p>Web Design</p>
-            </div>
+            <a
+              className="project-card"
+              href="https://elastic-bath-tacky-doctor-production.pipeops.app/"
+            >
+              <img src="/images/healthkeep.png" alt="HealthKeep" />
+              <div className="project-link">
+                <a href="https://elastic-bath-tacky-doctor-production.pipeops.app/">
+                  HealthKeep App
+                </a>
+                <p>Web Design</p>
+              </div>
+            </a>
           </div>
           <div className="project-slide3">
-            <img src="/images/whisper.png" alt="" />
-            <div className="project-link">
-              <a href="https://whisper-app-three.vercel.app/">
-                Whisper Anonymous Messaging App
-              </a>
-              <p>Web Design</p>
-            </div>
+            <a
+              className="project-card"
+              href="https://whisper-app-three.vercel.app/"
+            >
+              <img src="/images/whisper.png" alt="" />
+              <div className="project-link">
+                <a href="https://whisper-app-three.vercel.app/">
+                  Whisper Anonymous Messaging App
+                </a>
+                <p>Web Design</p>
+              </div>
+            </a>
           </div>
           <div className="project-slide4">
-            <img src="/images/project-6.jpg" alt="Fylo" />
-            <div className="project-link">
-              <a href="https://fylo-two-zeta.vercel.app/">Fylo</a>
-              <p>Web Design</p>
-            </div>
+            <a
+              className="project-card"
+              href="https://fylo-two-zeta.vercel.app/"
+            >
+              <img src="/images/project-6.jpg" alt="Fylo" />
+              <div className="project-link">
+                <a href="https://fylo-two-zeta.vercel.app/">Fylo</a>
+                <p>Web Design</p>
+              </div>
+            </a>
           </div>
           <div className="project-slide5">
-            <img src="/images/relax.png" alt="" />
-            <div className="project-link">
-              <a href="https://relax-animation.vercel.app/">Relax Animation</a>
-              <p>Web Design</p>
-            </div>
+            <a
+              className="project-card"
+              href="https://relax-animation.vercel.app/"
+            >
+              <img src="/images/relax.png" alt="" />
+              <div className="project-link">
+                <a href="https://relax-animation.vercel.app/">
+                  Relax Animation
+                </a>
+                <p>Web Design</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

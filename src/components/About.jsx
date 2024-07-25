@@ -34,17 +34,16 @@ function About() {
           <h1 className="about-bg">About</h1>
           <h1 className="about-header">About Me</h1>
           <p>
-            I'm a Professional Frontend Web Developer with skills in JavaScript
-            and React. I have a lifelong passion and enthusiasm for technology
-            most especially programming. I am passionate about leveraging my
-            diverse backgrounds to decipher challenging problems and create
-            delightful solutions and experiences. I build web applications with
-            modern technologies which includes JavaScript, React and CSS
-            together with other frameworks it supports. I look forward to honing
-            my skills in backend technologies like Node.JS, Express.JS,
-            Firebase. Being a diligent, hardworking and result oriented young
-            man, I always work towards achieving the best results on each
-            project I embark on.
+            I'm a Frontend Web Developer with skills in JavaScript and React. I
+            have a lifelong passion and enthusiasm for technology most
+            especially programming. I am passionate about leveraging my diverse
+            backgrounds to decipher challenging problems and create delightful
+            solutions and experiences. I build web applications with modern
+            technologies which includes JavaScript, React and CSS together with
+            other frameworks it supports. I look forward to honing my skills in
+            backend technologies like Node.JS, Express.JS, Firebase. Being a
+            diligent, hardworking and result oriented young man, I always work
+            towards achieving the best results on each project I embark on.
           </p>
 
           <table className="about-table">

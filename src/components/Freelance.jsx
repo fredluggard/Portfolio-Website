@@ -3,7 +3,7 @@ import React from "react";
 function Freelance() {
   return (
     <div className="freelance top-space">
-      <img src="/images/bg_1.jpg" alt="A background image of a river" />
+      <img src="/images/bg_1.jpg" alt="A river" />
       <div className="show-freelance">
         <h1>
           I'm <span className="fred">Available</span> for Freelancing

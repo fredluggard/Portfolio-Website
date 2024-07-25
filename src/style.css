@@ -495,6 +495,9 @@
   grid-row: 1/2;
   overflow: hidden;
 }
+.project-card {
+  text-decoration: none;
+}
 .project-slide img {
   display: block;
   position: absolute;
