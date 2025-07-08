@@ -61,7 +61,7 @@ function About() {
               <tr>
                 <td>Address:</td>
                 <td className="about-table-td">
-                  No. 11 Abumchukwu Nnoli Str Abakpa Nike
+                  No. 11 Abumchukwu Nnoli Str before Nike Lake, Enugu
                 </td>
               </tr>
               <tr>

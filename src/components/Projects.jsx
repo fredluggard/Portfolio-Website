@@ -24,8 +24,9 @@ function Projects() {
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
+      id="project"
     >
-      <div id="project" className="project top-space">
+      <div className="project top-space">
         <div className="project-one">
           <h1 className="project-bg">Projects</h1>
           <h1 className="project-header">My Projects</h1>
@@ -57,15 +58,10 @@ function Projects() {
             </a>
           </div>
           <div className="project-slide2">
-            <a
-              className="project-card"
-              href="https://elastic-bath-tacky-doctor-production.pipeops.app/"
-            >
-              <img src="/images/healthkeep.png" alt="HealthKeep" />
+            <a className="project-card" href="https://vida-orpin.vercel.app/">
+              <img src="/images/vida.png" alt="Vida" />
               <div className="project-link">
-                <a href="https://elastic-bath-tacky-doctor-production.pipeops.app/">
-                  HealthKeep App
-                </a>
+                <a href="https://vida-orpin.vercel.app/">Vida App</a>
                 <p>Web Design</p>
               </div>
             </a>

@@ -87,7 +87,7 @@ function Contact() {
               </a>
             </div>
             <h3>Address</h3>
-            <p>No. 11 Abumchukwu Nnoli Str Abakpa Nike</p>
+            <p>No. 11 Abumchukwu Nnoli Str before Nike Lake, Enugu</p>
           </div>
 
           <div className="contact-number">

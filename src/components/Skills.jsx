@@ -88,23 +88,23 @@ function Skills() {
 
           <div className="skill-set">
             <div className="skill-up">
+              <p>Next.Js</p>
+              <p className="padding5">75%</p>
+            </div>
+            <div className="skill-down">
+              <span className="skill-yellow5"></span>
+              <span className="skill-black5"></span>
+            </div>
+          </div>
+
+          <div className="skill-set">
+            <div className="skill-up">
               <p>WordPress</p>
               <p className="padding4">80%</p>
             </div>
             <div className="skill-down">
               <span className="skill-yellow4"></span>
               <span className="skill-black4"></span>
-            </div>
-          </div>
-
-          <div className="skill-set">
-            <div className="skill-up">
-              <p>SEO</p>
-              <p className="padding5">75%</p>
-            </div>
-            <div className="skill-down">
-              <span className="skill-yellow5"></span>
-              <span className="skill-black5"></span>
             </div>
           </div>
         </div>
